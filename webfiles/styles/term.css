@@ -1,0 +1,79 @@
+html,body,#terminal{height:100%;width:100%;margin:0;padding:0;min-width:300px;}
+
+#terminal {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-family: "Courier New";
+}
+
+#header {
+    padding: 10px;
+    font-family: "Arial";
+    text-align: center;
+}
+
+#input {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#output {
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#inputLine {
+/*    padding: 4px; */
+    float: left;
+    width: calc(100% - 70px);
+}
+
+#inputButton {
+/*    padding: 3px;*/
+    float: right;
+}
+
+#inputImgRed {
+    display: inherit;
+}
+
+#inputImgGreen {
+    display: none;
+}
+
+#sendButton {
+    width: 50px;
+    border-radius: 8px;
+}
+
+#txtIn {
+    width: 100%;
+}
+
+#txtIn, #sendButton {
+    background-color: rgba(192, 192, 192);
+    color: black;
+}
+
+#txtOut {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    resize: none;
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+
+#input, #txtIn, #output, #txtOut {
+    font: inherit;
+}
+
+#txtOut {
+    font-size: 0.8em;
+}

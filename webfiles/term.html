@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/term.css" />
+        <script type="text/javascript" src="scripts/term.js"></script>
+        <noscript>I need JavaScript!</noscript>
+        <title id="title">Terminal</title>
+    </head>
+    <body>
+        <div id="terminal">
+            <div id="header">
+                <h1>Terminal</h1>
+            </div>
+            <div id="input">
+                <div id="inputLine">
+                    <input type="text" id="txtIn" name="enter" placeholder="Arduino..." maxlength="100">
+                </div>
+                <div id="inputButton">
+                    <button id="sendButton" onclick="send()">
+                        <img id="inputImgRed" src="icons/redArrow.png" />
+                        <img id="inputImgGreen" src="icons/greenArrow.png" />
+                    </button>
+                </div>
+            </div>
+            <div id="output">
+                <textarea readonly id="txtOut"></textarea>
+            </div>
+        </div>
+    </body>
+</html>
