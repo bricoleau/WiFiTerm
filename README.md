@@ -1,7 +1,7 @@
 Remote WiFi Terminal for Arduino
 ================================
 
-As easy to use as Serial terminal provided with Arduino IDE
+As easy to use as the Serial terminal provided with Arduino IDE
 
 ##### Supported Hardware #####
  - ESP8266 [Arduino for ESP8266](https://github.com/esp8266/Arduino/)
