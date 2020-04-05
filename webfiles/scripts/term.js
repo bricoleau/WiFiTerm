@@ -26,21 +26,19 @@ function wsInit() {
     }
 }
 
-let waitingForPong = false;
+let waitingForPong = 0;
 
 function receivePong() {
-    waitingForPong = false;
+    waitingForPong = 0;
     online();
 }
 
-function handlePingPong()
-{
+function handlePingPong() {
     if (connected) {
-        if (waitingForPong) {
+        if (waitingForPong++ > 2) {
             offline();
         }
         ws.send("");
-        waitingForPong = true;
     }
     setTimeout(handlePingPong, 1000);
 }
