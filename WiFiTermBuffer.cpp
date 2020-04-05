@@ -4,15 +4,20 @@ WiFiTermBuffer::WiFiTermBuffer(size_t size)
 {
   _size = size;
   _buffer = (char *) malloc(_size);
-  _ix_read = 0;
-  _ix_write = 0;
-  _available = 0;
-  _previous = 0;
+  reset();
 }
 
 WiFiTermBuffer::~WiFiTermBuffer()
 {
   free(_buffer);
+}
+
+void WiFiTermBuffer::reset()
+{
+  _ix_read = 0;
+  _ix_write = 0;
+  _available = 0;
+  _previous = 0;
 }
 
 size_t WiFiTermBuffer::write(uint8_t c)

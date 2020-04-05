@@ -15,6 +15,8 @@ class WiFiTermBuffer
     WiFiTermBuffer(size_t);
     ~WiFiTermBuffer();
 
+    void reset();
+
     size_t write(uint8_t);
     int read();
     int peek() const;

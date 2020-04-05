@@ -39,6 +39,7 @@ class WiFiTerm : public Stream //with embedded Print class
     inline int available() {return rxBuf.available();}
     inline void flush()    {rxBuf.flush();}
 
+    inline void resetTx() {txBuf.reset();}
   private :
     void send();
     void sendPrevious(uint8_t num);

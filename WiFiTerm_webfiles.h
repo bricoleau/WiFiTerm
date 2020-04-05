@@ -11,7 +11,7 @@
 //     size : 406 bytes
 //     content_type : text/css
 //  /scripts/term.js
-//     size : 3439 bytes
+//     size : 3404 bytes
 //     content_type : text/css
 //  /styles/term.css
 //     size : 1169 bytes
