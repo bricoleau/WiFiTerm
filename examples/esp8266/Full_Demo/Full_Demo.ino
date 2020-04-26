@@ -29,6 +29,9 @@ void setup()
   server.begin();
   term.begin(server);
 
+  term.setAsDefaultWhenUrlNotFound(); //optional : redirect any unknown url to /term.html
+  term.activateArduinoFavicon(); //optional : send Arduino icon when a browser asks for favicon
+
   term.println("WiFiTerm started");
   term.println();
 

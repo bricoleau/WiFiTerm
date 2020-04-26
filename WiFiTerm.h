@@ -26,8 +26,11 @@ class WiFiTerm : public Stream //with embedded Print class
     WiFiTerm();
 
     void begin(WebServer &server);
-
     void handleClient();
+
+    //web options
+    void setAsDefaultWhenUrlNotFound();
+    void activateArduinoFavicon();
     inline int connectedClients() {return webSocket.connectedClients();}
 
     //required for Print class

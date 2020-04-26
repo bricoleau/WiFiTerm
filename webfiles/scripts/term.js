@@ -114,6 +114,8 @@ function resize() {
     document.getElementById("input").style.height = inputHeight + "px";
     var outputHight = terminalHeight - headerHeight - inputHeight - 20;
     document.getElementById("output").style.height = outputHight + "px";
+    var textarea = document.getElementById("txtOut");
+    textarea.scrollTop = textarea.scrollHeight;
 }
 window.onresize = resize;
 

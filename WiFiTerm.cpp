@@ -25,6 +25,33 @@ void WiFiTerm::handleClient()
   webSocket.loop();
 }
 
+void WiFiTerm::setAsDefaultWhenUrlNotFound()
+{
+  if (WiFiTerm_webfiles.server != NULL)
+  {
+    WiFiTerm_webfiles.server->onNotFound([]()
+    {
+      static const char location_P[] PROGMEM = "Location";
+      static const char text_plane_P[] PROGMEM = "text/plane";
+      char arg1[20];
+      char arg2[20];
+
+      strcpy_P(arg1, location_P);
+      strcpy_P(arg2, webfiles_term_html_path_P);
+      WiFiTerm_webfiles.server->sendHeader((const char*)arg1, (const char*)arg2, true);
+
+      strcpy_P(arg1, text_plane_P);
+      arg2[0] = '\0';
+      WiFiTerm_webfiles.server->send(302, (const char*)arg1, (const char*)arg2); 
+    });
+  }
+}
+
+void WiFiTerm::activateArduinoFavicon()
+{
+  WiFiTerm_webfiles.activateFavicon();
+}
+
 size_t WiFiTerm::write(uint8_t character)
 {
   if (txBuf.isFull()) send();
