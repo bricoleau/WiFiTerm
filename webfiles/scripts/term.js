@@ -79,7 +79,7 @@ function inputButtonSetup() {
 }
 
 function getESPlocation() {
-    var loc = location.host;
+    var loc = location.hostname;
     if (loc == "") loc = prompt("Enter ESP ip address","192.168.1.80");
     return loc;
 }
