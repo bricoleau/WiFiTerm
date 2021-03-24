@@ -1,0 +1,28 @@
+{
+    "name": "WiFiTerm",
+    "version": "1.0.0",
+    "description": "Remote WiFi Terminal for Arduino",
+    "keywords": "WiFi, Terminal, Web",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/bricoleau/WiFiTerm.git"
+    },
+    "authors":
+    [
+      {
+        "name": "bricoleau",
+        "url": "https://github.com/bricoleau"
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/bricoleau/WiFiTerm",
+    "dependencies": {
+      "Markus Sattle/WebSockets": "~2.3.6"
+    },
+    "frameworks": "Arduino",
+    "platforms": ["espressif32", "espressif8266"],
+    "build": {
+        "extraScript": "webFiles.py"
+    }
+  }
